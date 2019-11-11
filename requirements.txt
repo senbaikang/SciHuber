@@ -1,0 +1,5 @@
+wget==3.2
+requests==2.22.0
+urllib3==1.25.6
+Pillow==6.2.1
+beautifulsoup4==4.8.1
