@@ -26,4 +26,4 @@ For help, input `python3 main.py -h`.
 
 ## Note
 
-Should any problem emerge, please raise an issue.
+Should any problem emerges, please raise an issue.
