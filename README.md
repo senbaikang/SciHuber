@@ -4,7 +4,7 @@ SciHuber is a command-line  (currently only on macOS) helping download literatur
 
 ## Install
 
-To clone the code to your local machine, simply type in your terminal: `git clone git@github.com:saintethan/SciHuber.git`.
+To clone the code to your local machine, simply type in your terminal: `git@github.com:senbaikang/SciHuber.git`.
 
 SciHuber depends on some python libraries, which has been listed in the file named `requirements.txt`. To install these libraries, simply use `pip3 install -r /path/to/requirements.txt`.
 
