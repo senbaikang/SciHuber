@@ -10,13 +10,13 @@ from io import BytesIO
 
 
 class CaptchaProcessor:
-    def __init__(self, p_doc_link, p_img_link):
+    def __init__(self, p_doc_link, p_img_link, p_path):
         self._doc_link = p_doc_link
         self._img_link = p_img_link
         self._last_img_name = ""
         self._img_name_code_map = {}
-        self._captcha_local_file = os.getcwd() + "/resources/captcha_codes.json "
-        self._temp_img_local_file = os.getcwd() + "/resources/temp_img"
+        self._captcha_local_file = p_path + "/resources/captcha_codes.json "
+        self._temp_img_local_file = p_path + "/resources/temp_img"
 
     def _load_img_codes_lib(self):
         if len(self._img_name_code_map) < 1:

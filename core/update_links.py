@@ -5,10 +5,10 @@ from core.download_links import LinksDownloader
 
 
 class LinksUpdater:
-    def __init__(self, p_root):
+    def __init__(self, p_root, p_path):
         self._root = p_root
         self._links = []
-        self._links_local_file = os.getcwd() + "/resources/scihub_links.txt "
+        self._links_local_file = p_path + "/resources/scihub_links.txt "
 
     def _local_file_need_update(self, force_update):
         if force_update:

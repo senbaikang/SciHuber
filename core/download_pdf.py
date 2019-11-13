@@ -11,17 +11,21 @@ from bs4 import BeautifulSoup
 
 from core.process_captcha import CaptchaProcessor
 from core.update_links import LinksUpdater
+import core.utils
 
 
 class PdfDownloader:
-    def __init__(self, p_root):
+    def __init__(self, p_root, p_path):
         self._links = []
         self._invalid_links = []
         self._failed_doc_links = []
         self._doc_links_local_map = {}
-        self.links_updater = LinksUpdater(p_root)
-        self._doc_links_local_file = os.getcwd() + "/resources/doc_links.json "
-        self._failed_doc_links_local_file = os.getcwd() + "/resources/failed_doc_links.txt "
+        self.links_updater = LinksUpdater(p_root, p_path)
+        self.path = p_path
+
+        core.utils.check_and_initialize_folder(p_path)
+        self._doc_links_local_file = p_path + "/resources/doc_links.json "
+        self._failed_doc_links_local_file = p_path + "/resources/failed_doc_links.txt "
 
     def _generate_doc_link(self, p_ex_link):
         if len(self._links) < 1:
@@ -118,7 +122,7 @@ class PdfDownloader:
                 return True
             else:
                 if len(img_result) > 0:
-                    captcha_processor = CaptchaProcessor(link, img_result[0]["src"])
+                    captcha_processor = CaptchaProcessor(link, img_result[0]["src"], self.path)
                     image_name, captcha_code = captcha_processor.get_captcha_code()
 
                     for _count in range(5):
