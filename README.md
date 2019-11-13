@@ -1,12 +1,14 @@
 # SciHuber
 
-SciHuber is a command-line tool on macOS helping download literature on SciHub written in python3. Internally, it works in a similar way of accessing to the service of SciHub in any web browser. With all respect to SciHub, users of this tool are required to input captcha codes popping out by SciHub when accessing to the service too frequently.
+SciHuber is a command-line  (currently only on macOS) helping download literature on SciHub written in python3. Internally, it works in a similar way of accessing to the service of SciHub in any web browser. With all respect to SciHub, users of this tool are required to input captcha codes popping out by SciHub when accessing to the service too frequently.
 
 ## Install
 
+To clone the code to your local machine, simply type in your terminal: `git@github.com:saintethan/SciHuber.git`.
+
 SciHuber depends on some python libraries, which has been listed in the file named `requirements.txt`. To install these libraries, simply use `pip3 install -r /path/to/requirements.txt`.
 
-In addition, to display the captcha code, SciHuber currently uses xquartz. If you have better alternatives, please raise an issue.
+Currently, SciHuber depends on xquartz on macOS to display the captcha code. If you have better alternatives, please raise an issue. If you are using windows and have a good option to display the code, please modify the code and pull a request.
 
 ## Usage
 
@@ -25,7 +27,3 @@ For help, input `python3 main.py -h`.
 ## Note
 
 Should any problem emerge, please raise an issue.
-
-## Issues
-
-The author recommend the user run SciHuber directly on macOS, not under anaconda. There are issues that SciHuber does not work properly under anaconda for unknown reasons.
