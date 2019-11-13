@@ -16,7 +16,7 @@ There are two ways to use SciHuber, depending on the number of literature you wo
 
 1. If you would like to download only one document, use keyword `-l` (standing for link) or `--link=`, followed by the web link or doi to your literature, such as `python3 main.py -l yourlink` or `python3 main.py --link=yourlink`.
 
-2. SciHuber could also download a bunch of literature consecutively, whose web links or dois are stored into a text file in separate lines. In this case, use keyword `-f` or `--file=`, followed by the path to the text document, such as `python3 main.py -f yourfile` or `python3 main.py --file=yourfile`.
+2. SciHuber could also download a bunch of literature consecutively, whose web links or dois are stored into a text file in separated lines. In this case, use keyword `-f` or `--file=`, followed by the path to the text document, such as `python3 main.py -f yourfile` or `python3 main.py --file=yourfile`.
 
 In total, the above commands can be combined as `cd /path/to/scihuber/folder && python3 main.py -l yourlink`.
 
