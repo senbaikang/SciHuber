@@ -118,7 +118,7 @@ class PdfDownloader:
             except Exception:
                 # subprocess.run(["wget", link])
                 _temp_file = wget.download(link)
-                print(f"Use '{link}' to download to '{_temp_file}'!")
+                print(f"\nUse '{link}' to download to '{_temp_file}'!")
                 return True
             else:
                 if len(img_result) > 0:
@@ -140,7 +140,7 @@ class PdfDownloader:
                         except Exception:
                             # subprocess.run(["wget", link])
                             _temp_file = wget.download(link)
-                            print(f"Use '{link}' to download to '{_temp_file}'!")
+                            print(f"\nUse '{link}' to download to '{_temp_file}'!")
                             return True
                         else:
                             if len(img_result_temp) > 0:
@@ -148,7 +148,7 @@ class PdfDownloader:
                             else:
                                 # subprocess.run(["wget", link])
                                 _temp_file = wget.download(link)
-                                print(f"Use '{link}' to download to '{_temp_file}'!")
+                                print(f"\nUse '{link}' to download to '{_temp_file}'!")
                                 return True
 
                         if _count == 4:
@@ -157,7 +157,7 @@ class PdfDownloader:
                 else:
                     # subprocess.run(["wget", link])
                     _temp_file = wget.download(link)
-                    print(f"Use '{link}' to download to '{_temp_file}'!")
+                    print(f"\nUse '{link}' to download to '{_temp_file}'!")
                     return True
 
     def _get_add_download_doc_links(self, p_ex_link):
