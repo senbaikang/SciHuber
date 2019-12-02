@@ -1,6 +1,6 @@
 # SciHuber
 
-SciHuber is a command-line  (currently only on macOS) helping download literature on SciHub written in python3. Internally, it works in a similar way of accessing to the service of SciHub in any web browser. With all respect to SciHub, users of this tool are required to input captcha codes popping out by SciHub when accessing to the service too frequently.
+SciHuber is a command-line tool written in python3 (currently only on macOS) helping download literature on SciHub. Internally, it acquires access to the service of SciHub, working in a similar way to any web browser. Due to all respect to SciHub, users of this tool are required to input captcha codes popping out by SciHub when accessing to the service too frequently.
 
 ## Install
 
@@ -8,11 +8,13 @@ To clone the code to your local machine, simply type in your terminal: `git clon
 
 SciHuber depends on some python libraries, which has been listed in the file named `requirements.txt`. To install these libraries, simply use `pip3 install -r /path/to/requirements.txt`.
 
-Currently, SciHuber depends on xquartz on macOS to display the captcha code. If you have better alternatives, please raise an issue. If you are using windows and have a good option to display the code, please modify the code and pull a request.
+Currently, SciHuber depends on xquartz on macOS to display the captcha code. To install xquartz, use brew cask: `brew cask install xquartz`.
+
+If you have better alternatives to xquartz, please raise an issue. If you are using windows and have a good option to display the code, please modify the code and pull a request.
 
 ## Usage
 
-SciHuber must be called from its root directory. To enter that directory, use `cd /path/to/scihuber/folder`.
+SciHuber must be invoked from its root directory. To enter that directory, use `cd /path/to/scihuber/folder`.
 
 There are two ways to use SciHuber, depending on the number of literature you would like to download at the same time.
 
